@@ -1,0 +1,37 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+  
+
+
+processors:
+  batch:
+    timeout: 1s
+    send_batch_size: 1024
+
+  # Remove resource processor to avoid label duplication
+  # Labels are now set directly by the application
+
+exporters:
+  # Prometheus exporter
+  prometheus:
+    endpoint: "0.0.0.0:8889"
+
+  # Debug exporter for debugging (replaces deprecated logging exporter)
+  debug:
+    verbosity: detailed  # Shows full OTLP payload including unit field
+
+service:
+  pipelines:
+
+
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [prometheus, debug]
+
+  extensions: []

@@ -1,11 +1,12 @@
 # Redis Client Observability
 
-A helper repository for exploring Redis client observability with OpenTelemetry. This repo provides working examples in **Go (go-redis)** and **Python (redis-py)** along with a complete observability stack that you can spin up locally to easily try out Redis client metrics and tracing.
+A helper repository for exploring Redis client observability with OpenTelemetry. This repo provides working examples in **Go (go-redis)**, **Python (redis-py)**, and **TypeScript (node-redis)** along with a complete observability stack that you can spin up locally to easily try out Redis client metrics and tracing.
 
 ## Features
 
-- **Python Example (redis-py)** - Complete working example in Go with OpenTelemetry instrumentation
-- **Go Example (go-redis)** - Complete working example in Python with OpenTelemetry instrumentation
+- **Python Example (redis-py)** - Complete working example in Python with OpenTelemetry instrumentation
+- **Go Example (go-redis)** - Complete working example in Go with OpenTelemetry instrumentation
+- **TypeScript Example (node-redis)** - Complete working example in TypeScript with OpenTelemetry instrumentation
 - **One-Command Stack** - Start the entire observability infrastructure with `make start`
 - **Pre-built Dashboards** - Ready-to-use Grafana dashboards for Redis client metrics
 
@@ -17,7 +18,7 @@ A helper repository for exploring Redis client observability with OpenTelemetry.
 - Docker and Docker Compose installed
 - Make utility available
 - Redis server running (or use: `docker run -d -p 6379:6379 redis:latest`)
-- Python 3.8+ (for Python example) or Go 1.21+ (for Go example)
+- Python 3.8+ (for Python example), Go 1.21+ (for Go example), or Node.js 18+ (for the TypeScript example)
 
 ### 1. Start the Observability Stack
 
@@ -58,7 +59,14 @@ go mod download
 go run main.go
 ```
 
-Both examples will:
+**TypeScript Example (node-redis):**
+```bash
+cd examples/ts
+npm install
+npm start
+```
+
+The Python, Go & TypeScript examples will:
 - Connect to Redis on `localhost:6379`
 - Send metrics to the OTLP collector
 - Execute various Redis operations
@@ -71,6 +79,7 @@ This observability stack works with Redis client libraries that have OpenTelemet
 
 - **[redis-py](https://github.com/redis/redis-py)** v7.2.1+ - Python Redis client
 - **[go-redis](https://github.com/redis/go-redis)** v9.18.0+ - Go Redis client
+- **[node-redis](https://github.com/redis/node-redis)** - Node.js Redis client
 
 More client libraries coming soon!
 

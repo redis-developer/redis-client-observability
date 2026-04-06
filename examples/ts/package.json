@@ -1,0 +1,22 @@
+{
+  "name": "ts-redis-otel-example",
+  "private": true,
+  "type": "module",
+  "description": "TypeScript node-redis OpenTelemetry metrics example for redis-client-observability",
+  "scripts": {
+    "start": "tsx main.ts"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/exporter-metrics-otlp-http": "^0.214.0",
+    "@opentelemetry/sdk-metrics": "^2.1.0",
+    "redis": "file:../../../node-redis/packages/redis"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "tsx": "^4.20.5"
+  }
+}

@@ -402,7 +402,7 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "",
+            "axisLabel": "errors/sec",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "barWidthFactor": 0.6,
@@ -440,7 +440,7 @@
               }
             ]
           },
-          "unit": "ops"
+          "unit": "sishort"
         },
         "overrides": [
           {
@@ -517,7 +517,7 @@
           "refId": "B"
         }
       ],
-      "title": "Errors by Type",
+      "title": "Error Rate by Type",
       "type": "timeseries"
     },
     {
@@ -535,7 +535,7 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "",
+            "axisLabel": "errors/sec",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "barWidthFactor": 0.6,
@@ -573,7 +573,7 @@
               }
             ]
           },
-          "unit": "ops"
+          "unit": "sishort"
         },
         "overrides": []
       },
@@ -614,7 +614,7 @@
           "refId": "A"
         }
       ],
-      "title": "Errors by Category",
+      "title": "Error Rate by Category",
       "type": "timeseries"
     },
     {
@@ -1038,7 +1038,7 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "",
+            "axisLabel": "connections",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "barWidthFactor": 0.6,
@@ -1076,7 +1076,7 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "sishort"
         },
         "overrides": []
       },
@@ -1376,7 +1376,7 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "Failovers/sec",
+            "axisLabel": "failovers/sec",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "barWidthFactor": 0.6,
@@ -1414,7 +1414,7 @@
               }
             ]
           },
-          "unit": "ops"
+          "unit": "sishort"
         },
         "overrides": []
       },
@@ -1456,7 +1456,7 @@
           "refId": "A"
         }
       ],
-      "title": "Geo-Failovers",
+      "title": "Geo-Failovers Rate",
       "type": "timeseries"
     },
     {
@@ -1474,7 +1474,7 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "",
+            "axisLabel": "relaxations/sec",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "barWidthFactor": 0.6,
@@ -1512,7 +1512,7 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "sishort"
         },
         "overrides": []
       },
@@ -1553,7 +1553,7 @@
           "refId": "A"
         }
       ],
-      "title": "Connection Timeout Relaxations (Smart Client Handoffs)",
+      "title": "Connection Timeout Relaxations Rate (Smart Client Handoffs)",
       "type": "timeseries"
     },
     {
@@ -1571,7 +1571,7 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "Handoffs/sec",
+            "axisLabel": "handoffs/sec",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "barWidthFactor": 0.6,
@@ -1609,7 +1609,7 @@
               }
             ]
           },
-          "unit": "ops"
+          "unit": "sishort"
         },
         "overrides": []
       },
@@ -1650,7 +1650,7 @@
           "refId": "A"
         }
       ],
-      "title": "Connection Handoffs (Smart Client Handoffs)",
+      "title": "Connection Handoffs Rate (Smart Client Handoffs)",
       "type": "timeseries"
     },
     {
@@ -1816,7 +1816,7 @@
               }
             ]
           },
-          "unit": "ops"
+          "unit": "sishort"
         },
         "overrides": []
       },
@@ -1857,7 +1857,7 @@
           "refId": "A"
         }
       ],
-      "title": "Connection Closures",
+      "title": "Connection Closures Rate",
       "type": "timeseries"
     },
     {
@@ -2192,7 +2192,7 @@
           "refId": "A"
         }
       ],
-      "title": "Cache Requests",
+      "title": "Cache Requests Rate",
       "type": "timeseries"
     },
     {
@@ -2340,7 +2340,7 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "Evictions/sec",
+            "axisLabel": "evictions/sec",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "barWidthFactor": 0.6,
@@ -2378,7 +2378,7 @@
               }
             ]
           },
-          "unit": "ops"
+          "unit": "sishort"
         },
         "overrides": []
       },
@@ -2419,7 +2419,7 @@
           "refId": "A"
         }
       ],
-      "title": "Cache Evictions",
+      "title": "Cache Evictions Rate",
       "type": "timeseries"
     },
     {
@@ -2450,7 +2450,7 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "",
+            "axisLabel": "messages/sec",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "barWidthFactor": 0.6,
@@ -2488,7 +2488,7 @@
               }
             ]
           },
-          "unit": "ops"
+          "unit": "sishort"
         },
         "overrides": []
       },
@@ -2529,7 +2529,7 @@
           "refId": "A"
         }
       ],
-      "title": "Message Throughput",
+      "title": "Message Rate",
       "type": "timeseries"
     },
     {
@@ -2547,7 +2547,7 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "",
+            "axisLabel": "messages/sec",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "barWidthFactor": 0.6,
@@ -2585,7 +2585,7 @@
               }
             ]
           },
-          "unit": "ops"
+          "unit": "sishort"
         },
         "overrides": []
       },
@@ -2626,7 +2626,7 @@
           "refId": "A"
         }
       ],
-      "title": "Messages by Channel (Top 10)",
+      "title": "Message Rate by Channel (Top 10)",
       "type": "timeseries"
     },
     {
@@ -3004,7 +3004,7 @@
     ]
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -3021,5 +3021,5 @@
   "timezone": "",
   "title": "Redis Client Observability Dashboard",
   "uid": "redis-client-observability",
-  "version": 2
+  "version": 35
 }

@@ -159,7 +159,7 @@
               }
             ]
           },
-          "unit": "ops"
+          "unit": "sishort"
         },
         "overrides": []
       },
@@ -195,7 +195,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum(rate(redis_client_errors_total{exported_job=~\"$service_name\"}[$__rate_interval]))",
+          "expr": "sum(rate(redis_client_errors_total{exported_job=~\"$service_name\"}[$__rate_interval])) OR on() vector(0)",
           "legendFormat": "Error Rate",
           "range": true,
           "refId": "A"
@@ -268,8 +268,8 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "(\n  sum(rate(db_client_operation_duration_seconds_count{exported_job=~\"$service_name\"}[$__rate_interval]))\n  -\n  sum(rate(redis_client_errors_total{exported_job=~\"$service_name\"}[$__rate_interval]))\n)\n/\nsum(rate(db_client_operation_duration_seconds_count{exported_job=~\"$service_name\"}[$__rate_interval]))\n* 100",
-          "legendFormat": "Success Rate",
+          "expr": "(1 - \n  (\n    sum(rate(redis_client_errors_total{exported_job=~\"$service_name\"}[$__rate_interval])) OR on() vector(0)\n  )\n  /\n  sum(rate(db_client_operation_duration_seconds_count{exported_job=~\"$service_name\"}[$__rate_interval]))\n) * 100",
+          "legendFormat": "__auto",
           "range": true,
           "refId": "A"
         }
@@ -3004,7 +3004,7 @@
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
@@ -3021,5 +3021,5 @@
   "timezone": "",
   "title": "Redis Client Observability Dashboard",
   "uid": "redis-client-observability",
-  "version": 35
+  "version": 3
 }
